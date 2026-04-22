@@ -1,0 +1,26 @@
+[
+    {
+        "id": "clean-code",
+        "title": "Clean code",
+        "summary": "Tip for developers: Always write clean code!",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "author": "John Doe",
+        "publishedDate": "2026-06-01"
+    },
+    {
+        "id": "testing-in-software-development",
+        "title": "Testing in software development",
+        "summary": "The importance of testing in software development.",
+        "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "author": "Jane Smith",
+        "publishedDate": "2026-06-05"
+    },
+    {
+        "id": "optimizing-react-applications",
+        "title": "Optimizing React applications",
+        "summary": "How to optimize your React applications.",
+        "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "author": "Alice Johnson",
+        "publishedDate": "2026-06-10"
+    }
+]
