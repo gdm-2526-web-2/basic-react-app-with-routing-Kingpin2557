@@ -13,13 +13,13 @@ const Nav = () => {
         </ul>
         <ul>
           <li>
-            <CustomLink link="#" label="Home" />
+            <CustomLink link="/" label="Home" />
           </li>
           <li>
-            <CustomLink link="#" label="Articles" />
+            <CustomLink link="/articles" label="Articles" />
           </li>
           <li>
-            <CustomLink link="#" label="About" />
+            <CustomLink link="/about" label="About" />
           </li>
           <li>
             <Button type="secondary" link="tel:+1234567890">
