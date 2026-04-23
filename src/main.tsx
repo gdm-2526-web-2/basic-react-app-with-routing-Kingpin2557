@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "@picocss/pico/css/pico.min.css";
 import "./index.css";
 import { About, Articles, Home, Welcome } from "./pages";
-import { NavLayout, CenteredLayout } from "./layouts";
+import { NavLayout, CenteredLayout, SidebarLayout } from "./layouts";
 import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
 import { getData } from "./helpers";
@@ -21,9 +21,14 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/articles",
-        loader: async () => getData("./src/data/articles.json"),
-        element: <Articles />,
+        element: <SidebarLayout />,
+        children: [
+          {
+            path: "/articles",
+            loader: async () => getData("./src/data/articles.json"),
+            element: <Articles />,
+          },
+        ],
       },
     ],
   },

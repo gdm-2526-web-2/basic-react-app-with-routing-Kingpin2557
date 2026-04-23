@@ -1,4 +1,3 @@
-import Heading from "../components/Heading/Heading";
 import Card from "../components/Card/Card";
 import { useLoaderData } from "react-router";
 
@@ -12,22 +11,16 @@ function Articles() {
   const articles = useLoaderData();
 
   return (
-    <div className="grid">
-      <aside>
-        <Heading level={1}>Let op deze artikels zijn gemaakt met AI</Heading>
-      </aside>
-
-      <section>
-        {articles.map((article: BasicArticle) => (
-          <Card
-            key={article.id}
-            title={article.title}
-            content={article.summary}
-            url={`/details/${article.id}`}
-          />
-        ))}
-      </section>
-    </div>
+    <>
+      {articles.map((article: BasicArticle) => (
+        <Card
+          key={article.id}
+          title={article.title}
+          content={article.summary}
+          url={`/detail/${article.id}`}
+        />
+      ))}
+    </>
   );
 }
 
