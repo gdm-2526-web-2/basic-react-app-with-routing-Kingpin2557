@@ -1,19 +1,22 @@
 import Button from "../Button/Button";
 
-const Card = () => {
+type Card = {
+  title: String;
+  content: String;
+  url: string;
+};
+
+const Card = ({ title, content, url }: Card) => {
   return (
     <article>
       <header>
-        <span>Dit is een titel</span>
+        <span>{title}</span>
       </header>
 
-      <div>
-        Dit is de inhoud van een card. Hier komt er steeds wat verschillende
-        tekst.
-      </div>
+      <div>{content}</div>
 
       <footer>
-        <Button link="/link">Link</Button>
+        <Button link={url}>Read more</Button>
       </footer>
     </article>
   );

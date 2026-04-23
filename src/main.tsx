@@ -6,6 +6,7 @@ import { About, Articles, Home, Welcome } from "./pages";
 import { NavLayout, CenteredLayout } from "./layouts";
 import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
+import { getData } from "./helpers";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/articles",
+        loader: async () => getData("./src/data/articles.json"),
         element: <Articles />,
       },
     ],
