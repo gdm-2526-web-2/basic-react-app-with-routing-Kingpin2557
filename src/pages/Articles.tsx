@@ -7,6 +7,12 @@ type BasicArticle = {
   summary: string;
 };
 
+export type Article = BasicArticle & {
+  content: string;
+  author: string;
+  publishedDate: string;
+};
+
 function Articles() {
   const articles = useLoaderData();
 
@@ -17,7 +23,7 @@ function Articles() {
           key={article.id}
           title={article.title}
           content={article.summary}
-          url={`/detail/${article.id}`}
+          url={`/articles/${article.id}`}
         />
       ))}
     </>

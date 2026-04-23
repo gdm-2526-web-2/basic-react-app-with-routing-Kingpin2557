@@ -1,10 +1,11 @@
+import { Link } from "react-router";
 import LogoIcon from "../../assets/artevelde.svg";
 
 const Logo = () => {
   return (
-    <a href="/">
+    <Link to="/">
       <LogoIcon />
-    </a>
+    </Link>
   );
 };
 

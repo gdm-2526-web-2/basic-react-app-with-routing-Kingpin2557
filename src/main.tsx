@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "@picocss/pico/css/pico.min.css";
 import "./index.css";
-import { About, Articles, Home, Welcome } from "./pages";
+import { About, Articles, Detail, Home, Welcome } from "./pages";
 import { NavLayout, CenteredLayout, SidebarLayout } from "./layouts";
 import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
@@ -27,6 +27,12 @@ const router = createBrowserRouter([
             path: "/articles",
             loader: async () => getData("./src/data/articles.json"),
             element: <Articles />,
+          },
+          {
+            path: "/articles/:slug",
+            loader: async ({ params }) =>
+              getData("./src/data/articles.json", params.slug),
+            element: <Detail />,
           },
         ],
       },
