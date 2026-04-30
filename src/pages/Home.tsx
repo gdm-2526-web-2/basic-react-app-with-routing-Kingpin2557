@@ -1,7 +1,13 @@
 import Heading from "../components/Heading/Heading";
+import Voter from "../components/Voter/Voter";
 
 function Home() {
-  return <Heading level={1}>This is the home page</Heading>;
+  return (
+    <>
+      <Heading level={1}>Welkom bij IMD!</Heading>
+      <Voter />
+    </>
+  );
 }
 
 export default Home;

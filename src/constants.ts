@@ -1,1 +1,1 @@
-const ROUTES = {};
+export const ROUTES = {};

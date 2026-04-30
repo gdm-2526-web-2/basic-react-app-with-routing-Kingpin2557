@@ -1,0 +1,14 @@
+.btn {
+    font-family: system-ui;
+    text-align: left;
+    font-size: 12px;
+}
+
+.btn--primary {
+    background-color: cadetblue;
+}
+
+.btn--secondary {
+    background-color: bisque;
+    color: black;
+}
